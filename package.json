@@ -1,6 +1,6 @@
 {
   "name": "myclinic-drawer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A printing instruction data set",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,10 @@
   "keywords": [
     "printing"
   ],
+  "repository": {
+  	"type": "git",
+  	"url": "git@github.com:hangilc/myclinic-drawer.git"
+  },
   "author": "Hangil Chang",
   "license": "MIT"
 }
