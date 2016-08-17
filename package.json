@@ -1,0 +1,14 @@
+{
+  "name": "myclinic-drawer",
+  "version": "1.0.0",
+  "description": "A printing instruction data set",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js >test-out.json"
+  },
+  "keywords": [
+    "printing"
+  ],
+  "author": "Hangil Chang",
+  "license": "MIT"
+}
