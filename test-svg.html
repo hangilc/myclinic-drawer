@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Testing Drawer SVG</title>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="drawer-svg.js"></script>
+</head>
+<body>
+<div id="disp" style="width:148mm;height:210mm;border:1px solid black"></div>
+<script>
+	var pages = 
+		[
+		    [
+		        [
+		            "move_to",
+		            10,
+		            10
+		        ],
+		        [
+		            "line_to",
+		            30,
+		            20
+		        ],
+		        [
+		            "create_font",
+		            "gothic",
+		            "MS Gothic",
+		            10,
+		            0,
+		            0
+		        ],
+		        [
+		            "set_font",
+		            "gothic"
+		        ],
+		        [
+		            "draw_chars",
+		            "Hello, world",
+		            [
+		                10,
+		                15,
+		                20,
+		                25,
+		                30,
+		                35,
+		                40,
+		                45,
+		                50,
+		                55,
+		                60,
+		                65
+		            ],
+		            20
+		        ],
+		        [
+		            "set_text_color",
+		            0,
+		            0,
+		            255
+		        ],
+		        [
+		            "draw_chars",
+		            "Hello, world",
+		            [
+		                10,
+		                15,
+		                20,
+		                25,
+		                30,
+		                35,
+		                40,
+		                45,
+		                50,
+		                55,
+		                60,
+		                65
+		            ],
+		            40
+		        ],
+		        [
+		            "create_pen",
+		            "green",
+		            0,
+		            255,
+		            0,
+		            0.1
+		        ],
+		        [
+		            "set_pen",
+		            "green"
+		        ],
+		        [
+		            "move_to",
+		            10,
+		            50
+		        ],
+		        [
+		            "line_to",
+		            30,
+		            60
+		        ]
+		    ]
+		];
+	var ops = pages[0];
+	var svg = drawerToSvg(ops, {width: "148mm", height: "210mm", viewBox: "0 0 148 210"});
+	$("#disp").append(svg);
+</script>
+</body>
+</html>
