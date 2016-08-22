@@ -1,6 +1,6 @@
 {
   "name": "myclinic-drawer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A printing instruction data set",
   "main": "index.js",
   "scripts": {
