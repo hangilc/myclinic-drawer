@@ -114,3 +114,11 @@ declare class Compiler {
 	static measureChars: (s: string, fontSize: number) => MeasuredChar[];
 	static breakLines: (s: string, width: number, fontSize: number) => string[];
 }
+
+export type DrawerToSvgOption = {
+	width?: string;
+	height?: string;
+	viewBox?: string;
+}
+
+export function drawerToSvg(ops: Op[], option: DrawerToSvgOption): HTMLElement;
