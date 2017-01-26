@@ -52,7 +52,9 @@ declare class Box {
 	setHeight(height: number, anchor: VertAnchor): this;
 	flipRight(): this;
 	splitToColumns(...divs: number[]): this[];
+	splitToColumnsByWidths(...widths: number[]): this[];
 	splitToRows(...divs: number[]): this[];
+	splitToRowsByHeights(...heights: number[]): this[];
 	splitToEvenColumns(nCols: number): this[];
 	splitToEvenRows(nRows: number): this[];
 	splitToEvenCells(nRows: number, nCols: number): this[][];
