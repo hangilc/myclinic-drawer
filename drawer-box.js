@@ -192,6 +192,18 @@ Box.prototype.splitToColumns = function(){
 	return boxes;
 };
 
+Box.prototype.splitToColumnsByWidths = function(){
+	var widths = Array.prototype.slice.apply(arguments);
+	var divs = [];
+	var x = 0;
+	for(var i=0;i<widths.length;i++){
+		var width = widths[i];
+		x += width;
+		divs.push(x);
+	}
+	return Box.prototype.splitToColumns.apply(this, divs);
+}
+
 Box.prototype.splitToRows = function(){
 	var divs = Array.prototype.slice.apply(arguments);
 	var boxes = [], i, n = divs.length, left, top, right, bottom;
@@ -204,6 +216,18 @@ Box.prototype.splitToRows = function(){
 	}
 	return boxes;
 };
+
+Box.prototype.splitToRowsByHeights = function(){
+	var heights = Array.prototype.slice.apply(arguments);
+	var divs = [];
+	var y = 0;
+	for(var i=0;i<heights.length;i++){
+		var height = heights[i];
+		y += height;
+		divs.push(y);
+	}
+	return Box.prototype.splitToRows.apply(this, divs);
+}
 
 Box.prototype.splitToEvenColumns = function(nCols){
 	var w = this.width() / nCols, divs = [], i;
